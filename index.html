@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teranga Pizza</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-red-800 shadow-lg sticky top-0 z-50">
+        <div class="content-container py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-pizza-slice text-yellow-500 text-3xl"></i>
+                <h1 class="text-white text-2xl font-bold">
+                    <a href="#accueil">Teranga Pizza</a>
+                </h1>
+            </div>
+
+            <nav class="hidden md:flex space-x-16">
+                <!-- CSS-only -->
+                <div class="relative group inline-block">
+                    <button class="text-white font-medium hover:text-yellow-400 flex items-center text-xl focus:outline-none focus:ring-2 focus:ring-yellow-400 px-2 py-1" aria-haspopup="true" aria-expanded="false">
+                        Menu
+                        <svg class="w-4 h-4 ml-1 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+
+                    <!-- hidden par défaut, show on hover ou focus-within -->
+                    <div class="absolute left-0 mt-2 w-48 rounded shadow-lg bg-white text-black text-base hidden group-hover:block group-focus-within:block z-50 ring-1 ring-black/5">
+                        <a href=".//minipizza/mini.html" class="block px-4 py-2 hover:bg-yellow-100">mini-pizza</a>
+                        <a href=".//pizzaviande/viande.html" class="block px-4 py-2 hover:bg-yellow-100">Pizzas à la
+                            Viande</a>
+                        <a href=".//pizavegetari/vegeta.html" class="block px-4 py-2 hover:bg-yellow-100">Pizzas
+                            Végétariennes</a>
+                        <a href=".//pizzaitalienne/italien.html" class="block px-4 py-2 hover:bg-yellow-100">Pizzas
+                            Italiennes</a>
+                        <a href=".//pizzafromage/fromage.html" class="block px-4 py-2 hover:bg-yellow-100">Pizzas au
+                            Fromage</a>
+                        <a href=".//pizzaspecial/special.html" class="block px-4 py-2 hover:bg-yellow-100">Pizzas
+                            Spéciales</a>
+                    </div>
+                </div>
+
+                <a href="#about" class="text-white hover:text-yellow-400 font-medium text-xl hover:underline">À
+                    propos</a>
+                <a href="#contact" class="text-white hover:text-yellow-400 font-medium text-xl hover:underline">Contact</a>
+            </nav>
+
+            <div class="flex items-center space-x-4">
+                <a href="#contact" class="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-full font-medium transition">
+                    Commander
+                </a>
+                <button class="md:hidden text-white text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section - Pleine largeur -->
+    <section id="accueil" class="hero-bg min-h-screen flex items-center justify-center text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                la pizza italienne, à portée de main.
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
+                Découvrez nos pizzas faites à la main avec des ingrédients frais et une pâte préparée quotidiennement.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="#menu" class="bg-red-800 hover:bg-red-600 text-white px-8 py-3 rounded-full text-lg font-bold transition">
+                    Voir le menu
+                </a>
+                <a href="#contact" class="bg-yellow-500 hover:bg-yellow-600 text-white px-8 py-3 rounded-full text-lg font-bold transition">
+                    Commander
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section - Largeur limitée -->
+    <section id="menu" class="py-20 bg-gray-50">
+        <div class="content-container">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                    Notre Menu
+                </h2>
+                <div class="w-24 h-1 bg-red-600 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Choisissez parmi nos délicieuses pizzas préparées avec amour et des ingrédients de qualité supérieure.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Pizza 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition">
+                    <div class="relative">
+                        <img src="./images/pizzaviande.jpg" alt="Pizza à la viande" loading="lazy" class="w-full h-64 object-cover" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">
+                            Pizza à la viande
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            Viandes grillées, fromage fondant… un régal à chaque bouchée.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex text-yellow-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <a href="./pizzaviande/viande.html" class="bg-red-800 hover:bg-yellow-600 text-white px-4 py-2 rounded-full text-sm font-medium transition inline-block">
+                              Voir plus
+                           </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pizza 2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition">
+                    <div class="relative">
+                        <img src="./images/pizzavetegarienne.jpg" alt="Pizza végétarienne" loading="lazy" class="w-full h-64 object-cover" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">
+                            Pizzas végétariennes
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            Une explosion de saveurs fraîches avec légumes de saison et fromage fondant.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex text-yellow-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <a href="./pizavegetari/vegeta.html" class="bg-red-800 hover:bg-yellow-600 text-white px-4 py-2 rounded-full text-sm font-medium transition inline-block">
+                               Voir plus
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pizza 3 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition">
+                    <div class="relative">
+                        <img src="./images/pizzaspeciales.jpg" alt="Pizza spéciale" loading="lazy" class="w-full h-64 object-cover" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">
+                            Pizzas spéciales
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            Une combinaison surprenante de saveurs pour un plaisir unique.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex text-yellow-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <a href="./pizzaspecial/special.html" class="bg-red-800 hover:bg-yellow-600 text-white px-4 py-2 rounded-full text-sm font-medium transition inline-block">
+                                Voir plus
+                           </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pizza 4 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition">
+                    <div class="relative">
+                        <img src="./images/pizzafromage.jpg" alt="Pizza au fromage" loading="lazy" class="w-full h-64 object-cover" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">
+                            Pizza au fromage
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            Le plaisir ultime du fromage fondu, moelleux et savoureux à chaque bouchée.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex text-yellow-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <a href="./pizzafromage/fromage.html" class="bg-red-800 hover:bg-yellow-600 text-white px-4 py-2 rounded-full text-sm font-medium transition inline-block">
+                               Voir plus
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pizza 5 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition">
+                    <div class="relative">
+                        <img src="./images/pizzaitaliano.jpg" alt="Pizza italienne" loading="lazy" class="w-full h-64 object-cover" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">
+                            Pizzas italiennes
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            Sauce tomate, mozzarella, poivrons, champignons, oignons, olives.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex text-yellow-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <a href="./pizzaitalienne/italien.html" class="bg-red-800 hover:bg-yellow-600 text-white px-4 py-2 rounded-full text-sm font-medium transition inline-block">
+                                Voir plus
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pizza 6 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition">
+                    <div class="relative">
+                        <img src="./images/minipizza.jpg" alt="Mini Pizza" loading="lazy" class="w-full h-64 object-cover" />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Mini-Pizza</h3>
+                        <p class="text-gray-600 mb-4">
+                            Un parfum d'Italie en version mini, parfait à toute heure.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex text-yellow-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <a href="./minipizza/mini.html" class="bg-red-800 hover:bg-yellow-600 text-white px-4 py-2 rounded-full text-sm font-medium transition inline-block">
+                              Voir plus
+                           </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section - Pleine largeur pour l'image -->
+    <section id="about" class="relative h-screen max-h-[700px] overflow-hidden flex items-center group">
+        <div class="absolute inset-0 z-0">
+            <img src="./images/apropos.jpg" alt="À propos" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110" />
+            <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/40"></div>
+        </div>
+
+        <div class="relative z-10 py-12 px-4 sm:px-6 lg:px-12">
+            <div class="text-white space-y-8 max-w-2xl text-left ml-0">
+                <div class="flex justify-start mb-4">
+                    <div class="w-24 h-24 lg:w-32 lg:h-32 rounded-full border-4 border-white flex items-center justify-center bg-black/50">
+                        <div class="text-center">
+                            <div class="text-xs font-bold tracking-wider">
+                                <div>Teranga</div>
+                                <div>Pizza</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-1">
+                    <h1 class="text-4xl lg:text-6xl font-bold">Fraîches.</h1>
+                    <h1 class="text-4xl lg:text-6xl font-bold">Authentiques.</h1>
+                    <h1 class="text-4xl lg:text-6xl font-bold">Simples.</h1>
+                </div>
+
+                <p class="text-lg lg:text-xl font-light text-gray-200">
+                    Teranga Pizza, c'est l'alliance du savoir-faire italien et de l'hospitalité sénégalaise. Nos pizzas artisanales, préparées avec des ingrédients frais et une pâte maison, offrent à chaque bouchée un moment de convivialité et de plaisir authentique.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials - Largeur limitée -->
+    <section class="py-20 bg-red-800 text-white">
+        <div class="content-container">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    Ce que disent nos clients
+                </h2>
+                <div class="w-24 h-1 bg-yellow-500 mx-auto mb-6"></div>
+                <p class="max-w-2xl mx-auto">
+                    Découvrez pourquoi nos clients reviennent encore et encore
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white bg-opacity-10 p-8 rounded-lg backdrop-filter backdrop-blur-sm">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="mb-6 italic">
+                        "La meilleure pizza que j'ai mangée depuis mon voyage à Naples ! La croûte est parfaite et les ingrédients sont d'une fraîcheur incroyable."
+                    </p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4" />
+                        <div>
+                            <h4 class="font-bold">Louis Enrique</h4>
+                            <p class="text-sm opacity-80">Client régulier depuis 2018</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white bg-opacity-10 p-8 rounded-lg backdrop-filter backdrop-blur-sm">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="mb-6 italic">
+                        "Le service est exceptionnel et les pizzas arrivent toujours brûlantes et délicieuses. La Quatre Fromages est à tomber !"
+                    </p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4" />
+                        <div>
+                            <h4 class="font-bold">Madiambal Diagne</h4>
+                            <p class="text-sm opacity-80">Nouveau client</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white bg-opacity-10 p-8 rounded-lg backdrop-filter backdrop-blur-sm">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="mb-6 italic">
+                        "Nous commandons ici toutes les semaines en famille. Les enfants adorent la Margherita et moi je suis fan de la Napolitaine."
+                    </p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4" />
+                        <div>
+                            <h4 class="font-bold">Pocahontas</h4>
+                            <p class="text-sm opacity-80">Cliente depuis 2020</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section - Largeur limitée -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="content-container">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                    Commandez maintenant
+                </h2>
+                <div class="w-24 h-1 bg-red-600 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Livraison rapide ou à emporter. Ouvert 7j/7 de 11h à 23h
+                </p>
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2">
+                    <div class="bg-white p-8 rounded-xl shadow-lg mb-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">
+                            Nous trouver
+                        </h3>
+
+                        <div class="flex items-start mb-6">
+                            <div class="bg-red-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt text-red-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">Adresse</h4>
+                                <p class="text-gray-600">Stade PK-9</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start mb-6">
+                            <div class="bg-yellow-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-phone text-yellow-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">Téléphone</h4>
+                                <p class="text-gray-600">23 45 67 89</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="bg-red-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope text-red-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">Email</h4>
+                                <p class="text-gray-600">contact@teranga-pizza.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bloc de la carte -->
+                    <div class="rounded-xl overflow-hidden shadow-lg">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2269.58934639613!2d-16.50334334981191!3d16.025261109850046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xe9557b3440292bd%3A0x7fa8f5266ff31426!2sPatisserie%20Darou%20Salam!5e0!3m2!1sfr!2ssn!4v1761143804346!5m2!1sfr!2ssn"
+                            width="100%" height="300" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">
+                            Formulaire de contact
+                        </h3>
+                        <form>
+                            <div class="mb-6">
+                                <label for="name" class="block text-gray-700 font-medium mb-2">Nom complet</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500" />
+                            </div>
+                            <div class="mb-6">
+                                <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500" />
+                            </div>
+                            <div class="mb-6">
+                                <label for="phone" class="block text-gray-700 font-medium mb-2">Téléphone</label>
+
+                                <input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500" />
+                            </div>
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-700 font-medium mb-2">Votre commande</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"></textarea>
+                            </div>
+                            <button type="submit" class="bg-red-800 hover:bg-red-700 text-white py-3 px-8 rounded-lg font-bold transition mx-auto block">
+                                Envoyer la commande
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Action Button -->
+    <div class="fixed bottom-8 right-8 z-50">
+        <a href="#contact" class="bg-red-600 hover:bg-red-700 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl shadow-xl transition hover:scale-110">
+            <i class="fas fa-shopping-cart"></i>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-6">
+        <div class="content-container  mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-pizza-slice text-yellow-500 text-2xl"></i>
+                        <h3 class="text-xl font-bold">Teranga Pizza</h3>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Pizzeria artisanale depuis 1985. Nous perpétuons la tradition des pizzas napolitaines authentiques.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com" class="text-gray-400 hover:text-yellow-600 transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com" class="text-gray-400 hover:text-yellow-600 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.twitter.com" class="text-gray-400 hover:text-yellow-600 transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.whatsapp.com" class="text-gray-400 hover:text-yellow-600 transition">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Liens rapides</h4>
+                    <ul class="space-y-2">
+
+                        <li>
+                            <a href="#menu" class="text-gray-400 hover:text-yellow-600 transition">Menu</a>
+                        </li>
+                        <li>
+                            <a href="#about" class="text-gray-400 hover:text-yellow-600 transition">À propos</a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="text-gray-400 hover:text-yellow-600 transition">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Menu</h4>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="./pizzaviande/viande.html" class="text-gray-400 hover:text-yellow-600 transition">Pizza a la viande</a>
+                        </li>
+                        <li>
+                            <a href="./pizzaspecial/special.html" class="text-gray-400 hover:text-yellow-600 transition">Pizzas Spéciales</a>
+                        </li>
+                        <li>
+                            <a href="./pizavegetari/vegeta.html" class="text-gray-400 hover:text-yellow-600 transition">Pizzas Végétariennes</a>
+                        </li>
+                        <li>
+                            <a href="./pizzafromage/fromage.hm" class="text-gray-400 hover:text-yellow-600 transition">Pizza Fromage</a>
+                        </li>
+                        <li>
+                            <a href="./pizzaitalienne/italien.html" class="text-gray-400 hover:text-yellow-600 transition">Pizzas Italiennes</a>
+                        </li>
+                        <li>
+                            <a href="./minipizza/mini.html" class="text-gray-400 hover:text-yellow-600 transition">Mini Pizza</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="text-lg font-bold mb-4">Numero livreur:<strong class="text-yellow-500">771234567</strong>
+                    </h2>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-5 text-center text-gray-400">
+                <p>&copy; 2025 Teranga Pizza. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
